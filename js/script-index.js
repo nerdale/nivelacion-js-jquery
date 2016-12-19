@@ -64,8 +64,20 @@ $(document).ready( function(){
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
 
-	
+function renderActivity(recipe) {
+ var tpl = _.template('<a href="#" class="item-activity">' +
+  						'<span class="attribution">' +
+  						'<span class="avatar"><img src="<%= userAvatar %>" class="image-avatar"></span>' +
+	  		    			'<span class="meta">' +
+	  		      				'<span class="author"><%= userName %></span> made' +
+	  		      				'<span class="recipe"><%= recipeName %></span>: <%= text %>' +
+		      					'<span class="location">&mdash;<%= place %></span>' +
+	  		    				'</span>' +
+	  		 				'</span>' +
+  		 				'</span>' +
+  		 				'<div class="bg-image" style="background-image: url(<%= image %>);"></div>'+
+					'</a>');
+$('.list-activities').append(tpl(recipe));
 }
 
