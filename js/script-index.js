@@ -4,6 +4,11 @@ $(document).ready( function(){
 	renderHighlightedRecipes(recipesArray);
 	$('.js-back').hide();
 
+	function printNews(){
+		$('.nueva-receta').text('NUEVAS RECETAS');
+	}
+	printNews();
+
 });
 
 
