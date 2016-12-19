@@ -10,6 +10,7 @@ $(document).ready( function(){
 	}
 	printNews();
 
+
 });
 
 
@@ -41,13 +42,22 @@ function renderRecipe(recipe) {
 }
 
 
-
+$(document).ready( function(){
 /*
 * Función que se encarga de pintar todas las actividades
 */
-function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
-}
+	function renderActivities(activitiesArray){
+		var largo = activitiesArray.length;
+		for (var i = 0; i < largo; ++i){
+			renderActivity(activitiesArray[i]);
+		}
+		if(largo > 0){
+			$('.wrapper-message').css('display', 'none');
+		}
+		console.log('Activities: ', activitiesArray);
+	}
+	renderActivities(activitiesArray);
+});
 
 /*
 * Función que se encarga de pintar una actividad
@@ -55,7 +65,7 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
+
 	
 }
-
 
