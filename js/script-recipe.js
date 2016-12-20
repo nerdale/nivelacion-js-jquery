@@ -15,9 +15,8 @@ $(document).ready(function(){
 		$('.js-show-make').removeClass('active');
 	});
 
-	$("a#back").click(function(e){
+	$('a#back').click(function(e){
          e.preventDefault();
          window.location = 'index.html';   
 	});
-
 });
